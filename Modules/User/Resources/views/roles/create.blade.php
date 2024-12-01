@@ -535,7 +535,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="create_pos_sales" name="permissions[]"
                                                                value="create_pos_sales" {{ old('create_pos_sales') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="create_pos_sales">POS System</label>
+                                                        <label class="custom-control-label" for="create_pos_sales">Smartstock</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
