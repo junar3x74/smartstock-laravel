@@ -13,7 +13,7 @@
     <div class="row">
         <div class="col-md-12">
             <div style="text-align: center;margin-bottom: 25px;">
-                <img width="180" src="{{ asset('images/logo-dark.png') }}" alt="Logo">
+                <img width="180" src="{{ asset('images/smart_log.png') }}" alt="Logo">
                 <h4 style="margin-bottom: 20px;">
                     <span>Reference::</span> <strong>{{ $quotation->reference }}</strong>
                 </h4>
