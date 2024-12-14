@@ -1,10 +1,10 @@
 <picture>
-    <source srcset="public/images/logo.png"  
+    <source srcset="public/images/smart_log.png"  
             media="(prefers-color-scheme: dark)">
     <img src="public/images/smart_log.png" alt="App Logo">
 </picture>
 
-> **Important Note:** This Project is ready for Production. But use code from main branch only. If you find any bug or have any suggestion please create an Issue.
+> **Important Note:** I don't know anymore .
 
 # Local Installation
 
