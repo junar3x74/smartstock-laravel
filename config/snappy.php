@@ -7,20 +7,33 @@ return [
     | Snappy PDF / Image Configuration
     |--------------------------------------------------------------------------
     |
-    | This configuration contains settings for PDF and image generation.
-    | Ensure the binary paths are correctly set in your environment file or 
-    | directly in this configuration.
+    | This option contains settings for PDF generation.
     |
-    | Key Settings:
-    | - 'enabled': Determines if the feature is active.
-    | - 'binary': Path to the wkhtmltopdf or wkhtmltoimage executable. Spaces
-    |   in the path are handled by wrapping the value in quotes.
-    | - 'timeout': Set false for unlimited execution time.
-    | - 'options': Additional command-line options passed to the binaries.
+    | Enabled:
+    |
+    |    Whether to load PDF / Image generation.
+    |
+    | Binary:
+    |
+    |    The file path of the wkhtmltopdf / wkhtmltoimage executable.
+    |
+    | Timout:
+    |
+    |    The amount of time to wait (in seconds) before PDF / Image generation is stopped.
+    |    Setting this to false disables the timeout (unlimited processing time).
+    |
+    | Options:
+    |
+    |    The wkhtmltopdf command options. These are passed directly to wkhtmltopdf.
+    |    See https://wkhtmltopdf.org/usage/wkhtmltopdf.txt for all options.
+    |
+    | Env:
+    |
+    |    The environment variables to set while running the wkhtmltopdf process.
     |
     */
 
-    'pdf' => [
+   'pdf' => [
         'enabled' => true,
         'binary'  => '"' . env('WKHTML_PDF_BINARY', 'C:/Program Files/wkhtmltopdf/bin/wkhtmltopdf.exe') . '"',
         'timeout' => false,
@@ -33,12 +46,12 @@ return [
 
     'image' => [
         'enabled' => true,
-        'binary'  => '"' . env('WKHTML_IMG_BINARY', 'C:/Program Files/wkhtmltopdf/bin/wkhtmltoimage.exe') . '"',
+        'binary'  => env('WKHTML_IMG_BINARY', ''),
         'timeout' => false,
         'options' => [
-            'enable-local-file-access' => true,
+            'enable-local-file-access' => true
         ],
-        'env' => [],
+        'env'     => [],
     ],
 
 ];
